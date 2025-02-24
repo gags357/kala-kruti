@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Tablet and smaller desktop */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .experts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exam-levels, .exam-schedule, .centers-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .modal-expert-details {
+        flex-direction: column;
+    }
+
+    .modal-expert-details img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 0 auto var(--spacing-md);
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: var(--spacing-lg);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 900;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: var(--spacing-sm) 0;
+    }
+
+    .paths-container {
+        flex-direction: column;
+    }
+
+    .path-card {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guru-results {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        max-width: 100%;
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: space-between;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-levels, .exam-schedule, .centers-list, .resources-list {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-tab-buttons {
+        flex-direction: column;
+    }
+
+    .exam-tab-btn {
+        text-align: left;
+        border-left: 3px solid transparent;
+    }
+
+    .exam-tab-btn.active {
+        border-bottom: none;
+        border-left: 3px solid var(--primary);
+    }
+
+    .guru-card {
+        flex-direction: column;
+    }
+
+    .guru-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .guru-image img {
+        width: 100%;
+    }
+
+    .guru-info {
+        padding: var(--spacing-md);
+        text-align: center;
+    }
+
+    .modal-content {
+        margin: 20px;
+    }
+
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-controls button {
+        font-size: 1.2rem;
+        margin: 0 var(--spacing-xs);
+    }
+
+    #play-pause {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+}
