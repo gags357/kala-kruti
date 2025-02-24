@@ -188,12 +188,20 @@
         padding: 1.5rem;
     }
     
-    .hero-content::before,
-    .hero-content::after,
-    .hero-content > h1::before,
-    .hero-content > h1::after {
+    .corner-top-left,
+    .corner-top-right,
+    .corner-bottom-left,
+    .corner-bottom-right {
         width: 15px;
         height: 15px;
+    }
+    
+    .hero-content p {
+        word-break: normal;
+        white-space: normal;
+        /* Ensure any problematic text wraps properly */
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
     
     .hero-decoration {

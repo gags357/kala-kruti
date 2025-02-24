@@ -274,43 +274,54 @@ header::before {
 }
 
 /* Decorative corners for hero content */
-.hero-content::before,
-.hero-content::after,
-.hero-content > h1::before,
-.hero-content > h1::after {
-    content: '';
+.corner-top-left,
+.corner-top-right,
+.corner-bottom-left,
+.corner-bottom-right {
     position: absolute;
     width: 20px;
     height: 20px;
     border-color: var(--secondary);
 }
 
-.hero-content::before {
+.corner-top-left {
     top: 15px;
     left: 15px;
-    border-top: 2px solid;
-    border-left: 2px solid;
+    border-top: 2px solid var(--secondary);
+    border-left: 2px solid var(--secondary);
 }
 
-.hero-content::after {
+.corner-top-right {
     top: 15px;
     right: 15px;
-    border-top: 2px solid;
-    border-right: 2px solid;
+    border-top: 2px solid var(--secondary);
+    border-right: 2px solid var(--secondary);
 }
 
-.hero-content > h1::before {
-    bottom: -60px;
+.corner-bottom-left {
+    bottom: 15px;
     left: 15px;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
+    border-bottom: 2px solid var(--secondary);
+    border-left: 2px solid var(--secondary);
 }
 
-.hero-content > h1::after {
-    bottom: -60px;
+.corner-bottom-right {
+    bottom: 15px;
     right: 15px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
+    border-bottom: 2px solid var(--secondary);
+    border-right: 2px solid var(--secondary);
+}
+
+/* Fix for the paragraph text */
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 1.1s;
+    line-height: 1.7;
+    word-spacing: 0.1em;
+    letter-spacing: 0.02em;
+    white-space: normal;
 }
 
 .hero-content h1 {
@@ -388,11 +399,61 @@ header::before {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.path-card::before,
+.path-card::after,
+.path-card .corner-bl,
+.path-card .corner-br {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: var(--secondary);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.path-card::before {
+    top: 10px;
+    left: 10px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+}
+
+.path-card::after {
+    top: 10px;
+    right: 10px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+}
+
+.path-card .corner-bl {
+    bottom: 10px;
+    left: 10px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+}
+
+.path-card .corner-br {
+    bottom: 10px;
+    right: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
 }
 
 .path-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.path-card:hover::before,
+.path-card:hover::after,
+.path-card:hover .corner-bl,
+.path-card:hover .corner-br {
+    opacity: 1;
 }
 
 .path-icon {
