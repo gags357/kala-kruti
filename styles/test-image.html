@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Path Test</title>
+</head>
+<body>
+    <h1>Testing Image Paths</h1>
+    
+    <h2>Option 1: Relative path with ./</h2>
+    <img src="./assets/images/hero-bg.jpeg" alt="Hero Background" width="300">
+    
+    <h2>Option 2: Relative path without ./</h2>
+    <img src="assets/images/hero-bg.jpeg" alt="Hero Background" width="300">
+    
+    <h2>Option 3: From parent directory</h2>
+    <img src="../assets/images/hero-bg.jpeg" alt="Hero Background" width="300">
+    
+    <h2>Option 4: Absolute path</h2>
+    <img src="/assets/images/hero-bg.jpeg" alt="Hero Background" width="300">
+    
+    <h2>Direct filename (if in same directory)</h2>
+    <img src="hero-bg.jpeg" alt="Hero Background" width="300">
+</body>
+</html>
